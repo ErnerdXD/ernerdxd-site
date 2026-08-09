@@ -1,4 +1,4 @@
-"use client";
+ï»¿"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -113,8 +113,8 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
-                  I build practical products and intelligent systems — from modern web apps to
-                  computer vision solutions — with a focus on speed, usability, and impact.
+                  I build practical products and intelligent systems â€” from modern web apps to
+                  computer vision solutions â€” with a focus on speed, usability, and impact.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
@@ -276,3 +276,4 @@ export default function Home() {
     </>
   );
 }
+
