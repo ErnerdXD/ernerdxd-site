@@ -1,12 +1,5 @@
 const projects = [
   {
-    title: "Voltogo App",
-    description:
-      "Mobile/web application project focused on practical user workflows and clean product experience.",
-    href: "https://github.com/ErnerdXD/Voltogo_App",
-    stack: ["App Dev", "Product", "UI/UX"],
-  },
-  {
     title: "Face Mask Detection Attendance System",
     description:
       "Computer vision project that detects face masks and supports attendance tracking workflows.",
