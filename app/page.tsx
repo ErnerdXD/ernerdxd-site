@@ -1,21 +1,17 @@
 const projects = [
   {
-    title: "Project One",
-    description: "A full-stack web app focused on performance, clean UI, and great user experience.",
-    href: "#",
-    stack: ["Next.js", "TypeScript", "Tailwind"],
+    title: "Voltogo App",
+    description:
+      "Mobile/web application project focused on practical user workflows and clean product experience.",
+    href: "https://github.com/ErnerdXD/Voltogo_App",
+    stack: ["App Dev", "Product", "UI/UX"],
   },
   {
-    title: "Project Two",
-    description: "A practical tool that solves a real workflow problem with a fast, responsive interface.",
-    href: "#",
-    stack: ["React", "Node.js", "API"],
-  },
-  {
-    title: "Project Three",
-    description: "An experimental project where I explored product design, iteration, and rapid shipping.",
-    href: "#",
-    stack: ["Vercel", "Postgres", "UX"],
+    title: "Face Mask Detection Attendance System",
+    description:
+      "Computer vision project that detects face masks and supports attendance tracking workflows.",
+    href: "https://github.com/ErnerdXD/Face-Mask-Detection-Attendance-System",
+    stack: ["Python", "Computer Vision", "OpenCV"],
   },
 ];
 
