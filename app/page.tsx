@@ -86,6 +86,12 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-2 sm:gap-3">
                 <a
+                  href="/nfc"
+                  className="rounded-full bg-cyan-300 px-4 py-2 text-sm font-bold text-slate-950 transition hover:brightness-110"
+                >
+                  NFC Review Cards
+                </a>
+                <a
                   href="https://github.com/ErnerdXD"
                   target="_blank"
                   rel="noreferrer"
