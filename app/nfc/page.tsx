@@ -6,9 +6,9 @@ import Image from "next/image";
 const products = [
   {
     name: "Review Stand — Black",
-    description: "A black standing review display, fully set up with your Google review QR code and NFC link.",
+    description: "A black standing review display with a programmed NFC link for customers to tap and leave a review.",
     price: "RM70",
-    tags: ["NFC + QR setup", "Black", "Standing display"],
+    tags: ["NFC only", "Black", "Standing display"],
     tone: "from-slate-700 to-slate-950",
     label: "TAP TO REVIEW",
     image: "/products/image1.png",
@@ -75,7 +75,7 @@ export default function NFCPage() {
         <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="max-w-3xl">
           <p className="mb-5 inline-flex rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">Google review tools</p>
           <h1 className="text-5xl font-black leading-[0.98] tracking-tight sm:text-7xl">Make it easier to get <span className="bg-gradient-to-r from-cyan-200 to-blue-400 bg-clip-text text-transparent">more reviews.</span></h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">Complete RM70 review-card setup for cafés, salons, restaurants, retail shops and local businesses. Every option includes your Google review QR code and programmed NFC link.</p>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">Complete RM70 review-card setup for cafés, salons, restaurants, retail shops and local businesses. Choose NFC-only or NFC + QR, with the link programmed for your Google review page.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#models" className="rounded-xl bg-cyan-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:brightness-110">View available models</a>
             <a href="https://wa.me/60123456789" target="_blank" rel="noreferrer" className="rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold transition hover:border-cyan-300/60">Ask for a quote</a>
@@ -101,7 +101,7 @@ export default function NFCPage() {
           {[['01', 'Choose a model', 'Pick NFC-only or NFC + QR based on how your customers use their phones.'], ['02', 'Send your details', 'Share your logo, business name and Google review link.'], ['03', 'Receive your card', 'Your card is programmed, branded and ready to place at your counter.']].map(([number, title, text]) => <div key={number}><p className="text-sm font-black text-cyan-300">{number}</p><h3 className="mt-3 font-bold">{title}</h3><p className="mt-2 text-sm leading-relaxed text-slate-400">{text}</p></div>)}
         </section>
 
-          <div className="mt-10 flex flex-col items-start justify-between gap-5 rounded-3xl bg-cyan-300 p-6 text-slate-950 sm:flex-row sm:items-center sm:p-8"><div><h2 className="text-2xl font-black">Complete setup: RM70</h2><p className="mt-1 text-sm text-slate-800/80">Includes QR code creation, NFC programming and setup for your Google review link.</p></div><a href="https://wa.me/60123456789" target="_blank" rel="noreferrer" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800">Message on WhatsApp →</a></div>
+          <div className="mt-10 flex flex-col items-start justify-between gap-5 rounded-3xl bg-cyan-300 p-6 text-slate-950 sm:flex-row sm:items-center sm:p-8"><div><h2 className="text-2xl font-black">Complete setup: RM70</h2><p className="mt-1 text-sm text-slate-800/80">Includes NFC programming, plus QR code setup for the QR models.</p></div><a href="https://wa.me/60123456789" target="_blank" rel="noreferrer" className="rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800">Message on WhatsApp →</a></div>
       </section>
     </main>
   );
