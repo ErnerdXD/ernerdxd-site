@@ -4,26 +4,53 @@ import { motion } from "framer-motion";
 
 const products = [
   {
-    name: "Classic NFC Card",
-    description: "A clean, durable card that sends customers straight to your Google review page.",
+    name: "Review Stand — Black",
+    description: "A standing review display with a simple tap-to-review design for counters and tables.",
     price: "From RM15",
-    tags: ["NFC only", "Black or white", "Custom logo"],
+    tags: ["NFC only", "Black", "Standing display"],
     tone: "from-slate-700 to-slate-950",
+    label: "TAP TO REVIEW",
   },
   {
-    name: "NFC + QR Card",
-    description: "Tap with a phone or scan the QR code. The most flexible choice for every customer.",
+    name: "Review Stand — Black + QR",
+    description: "The black standing display with both NFC tap and QR scan options for easy access.",
     price: "From RM20",
-    tags: ["NFC + QR", "Black or white", "Custom design"],
+    tags: ["NFC + QR", "Black", "Standing display"],
     tone: "from-cyan-700 to-blue-950",
     featured: true,
+    label: "TAP OR SCAN",
   },
   {
-    name: "Premium Branded Card",
-    description: "A more polished branded card for businesses that want their review request to stand out.",
-    price: "From RM30",
-    tags: ["NFC + QR", "Premium finish", "Fully branded"],
-    tone: "from-amber-700 to-orange-950",
+    name: "Review Stand — White + QR",
+    description: "A clean white table stand with a QR code and programmable NFC chip built in.",
+    price: "From RM20",
+    tags: ["NFC + QR", "White", "Standing display"],
+    tone: "from-slate-200 to-slate-400",
+    label: "REVIEW US",
+  },
+  {
+    name: "Review Card — White",
+    description: "A compact flat card for tables, counters or takeaway bags. Easy to customise with your logo.",
+    price: "From RM18",
+    tags: ["NFC + QR", "White", "Flat card"],
+    tone: "from-white to-slate-200",
+    label: "REVIEW US ON GOOGLE",
+  },
+  {
+    name: "Review Card — Blue",
+    description: "A bold blue review card with a clear tap-and-scan layout that catches attention.",
+    price: "From RM18",
+    tags: ["NFC + QR", "Blue", "Flat card"],
+    tone: "from-blue-500 to-blue-800",
+    label: "REVIEW US ON GOOGLE",
+  },
+  {
+    name: "NFC Review Sticker",
+    description: "A self-adhesive NFC sticker for doors, counters, mirrors or any smooth surface.",
+    price: "From RM8",
+    tags: ["NFC only", "Self-adhesive", "Approx. 10 cm"],
+    tone: "from-slate-100 to-slate-300",
+    label: "TAP TO REVIEW",
   },
 ];
 
@@ -48,12 +75,14 @@ export default function NFCPage() {
           </div>
         </motion.div>
 
-        <div id="models" className="mt-20 grid gap-5 md:grid-cols-3">
+        <div id="models" className="mt-20 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product, index) => (
             <motion.article key={product.name} initial={{ opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.08 }} className={`relative overflow-hidden rounded-3xl border ${product.featured ? "border-cyan-300/70" : "border-white/10"} bg-white/[0.055] p-5 backdrop-blur-xl`}>
               {product.featured && <span className="absolute right-4 top-4 rounded-full bg-cyan-300 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-slate-950">Most flexible</span>}
               <div className={`grid h-52 place-items-center rounded-2xl bg-gradient-to-br ${product.tone}`}>
-                <div className="grid h-32 w-48 place-items-center rounded-xl border border-white/25 bg-white/15 shadow-2xl backdrop-blur-sm"><div className="text-center"><div className="mx-auto mb-3 h-10 w-10 rounded-lg border-2 border-white/70 p-1"><div className="h-full w-full rounded-sm bg-white/80" /></div><span className="text-[10px] font-bold tracking-[0.25em] text-white/90">YOUR LOGO</span></div></div>
+                <div className="relative grid h-36 w-48 place-items-center rounded-xl border border-black/10 bg-white/90 shadow-2xl">
+                  <div className="text-center text-slate-900"><p className="text-[9px] font-black tracking-wide">{product.label}</p><div className="mx-auto my-3 h-12 w-12 rounded-full border-4 border-blue-500 p-2"><div className="h-full w-full rounded-sm bg-slate-900" /></div><div className="flex justify-center gap-1 text-xs text-amber-500">★★★★★</div></div>
+                </div>
               </div>
               <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-cyan-200">{product.price}</p>
               <h2 className="mt-2 text-2xl font-bold">{product.name}</h2>
